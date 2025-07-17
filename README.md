@@ -1,181 +1,148 @@
-Appsus - Google Apps Suite Clone
+# 🗂️ APPSUS – Google Apps Suite Clone
 
-A comprehensive clone of Google's productivity suite, featuring Google Keep and Gmail functionality. Built with React, this project demonstrates advanced front-end development techniques and state management.
-📱 Applications
-📝 Notes (Google Keep Clone)
-Create, manage, and organize notes with multiple formats including text, lists, images, videos, audio, and canvas drawings.
-Features:
+A comprehensive clone of **Google’s productivity suite**, built with **React**, featuring core functionality from **Google Keep** and **Gmail**. This project showcases advanced front-end development, state management, modular design, and cross-app integration.
 
-Multiple Note Types:
+> ✨ Pixel-perfect · Component-driven · Fully responsive
 
-Text notes
-Image notes
-Todo lists
-YouTube videos
-Audio notes - In prograss
-Canvas drawings- In prograss
+---
 
+## 🔧 Applications Overview
 
-Organization:
+### 📝 Notes – *Google Keep Clone*
+Create, manage, and organize notes in multiple formats:  
+Text · Todo Lists · Images · YouTube Videos · Audio · Canvas
 
-Pin important notes
-Archive notes
-Move notes to trash
-Color-code notes
+**Main Features:**
+- 🗒️ Multiple Note Types:
+  - Text notes
+  - Todo lists with checkbox logic
+  - Image notes
+  - YouTube embedded video notes
+  - Canvas drawings *(in progress)*
+  - Audio notes *(in progress)*
 
+- 🎨 Organization:
+  - Pin, archive, trash notes
+  - Color-coded notes
+  - Filter by note type and text
 
-Rich Editing:
+- ✍️ Rich Editing:
+  - In-place editing
+  - Drawing tools for canvas
+  - Todo management UI
 
-In-place editing
-Drawing tools
-Todo management
+---
 
+### 📧 Mail – *Gmail Clone*
+A fully-featured email client with folder structure, filters, and note integration.
 
+**Main Features:**
+- 📬 Email Management:
+  - Compose new emails
+  - View inbox, sent, drafts, and trash
+  - Star important emails
+  - Mark as read/unread
 
-📧 Mail (Gmail Clone)
-A fully-featured email client with organization, composition, and management capabilities.
-Features:
+- 💾 Draft Auto-Save:
+  - Auto-save every 5 seconds
+  - Seamless resume of incomplete drafts
 
-Email Management:
+- 🔗 Note-to-Mail Integration:
+  - Send notes as emails directly
+  - Compose new mail from note content
 
-Compose new emails
-View inbox, sent, and drafts
-Star important emails
-Mark as read/unread
-Move to trash
+---
 
+## 🚀 Tech Stack
 
-Auto-saving Drafts:
+| Area           | Technologies / Tools                                 |
+|----------------|------------------------------------------------------|
+| Frontend       | React, React Router, JSX, CSS                        |
+| State Mgmt     | React Hooks (`useState`, `useEffect`, `useRef`)     |
+| Data Handling  | LocalStorage (custom services for persistence)       |
+| UI/UX          | Custom modal system, animations, transitions         |
+| Forms          | Controlled components, validation, auto-save drafts |
+| Note Types     | Text, Todo, YouTube embeds, Image, Audio, Canvas     |
+| Styling        | Component-scoped CSS                                 |
+| Integration    | Notes ↔ Mail linkage (send note as email)            |
+| Deployment     | GitHub Pages / local browser-based storage           |
 
-Automatic draft saving every 5 seconds
-Resume drafts seamlessly
+---
 
+## 📸 Screenshots
 
-Composition Tools:
+<p float="left">
+  <img src="https://res.cloudinary.com/drx3ncwmd/image/upload/v1752781055/appsus1_vrpz9s.png" width="1000" />
+  <img src="https://res.cloudinary.com/drx3ncwmd/image/upload/v1752781055/appsus2_wmj9ng.png" width="1000" />
+  <img src="https://res.cloudinary.com/drx3ncwmd/image/upload/v1752781054/appsus3_qquqy1.png" width="1000" />
+  <img src="https://res.cloudinary.com/drx3ncwmd/image/upload/v1752781056/appsus4_xxvc6u.png" width="1000" />
+</p>
 
-Rich text editor
-Subject and recipient management
-Link with notes (compose from note content)
+---
 
+## 🧩 Key Functionality
 
+### Notes App
+- ✅ Create/Edit/Delete notes in various formats
+- 📌 Pin/archive/trash features
+- 🎨 Color-coding and filtering
+- 📝 Rich editing + canvas drawing
+- 📹 YouTube and audio embedding
 
-🚀 Tech Stack
+### Mail App
+- 📧 Compose and manage emails
+- 📂 Folders: inbox, sent, drafts, starred, trash
+- ⏳ Auto-save drafts every 5 seconds
+- 📎 Send notes as emails
 
-Frontend: React (Hooks-based architecture)
-Routing: React Router
-State Management: React Hooks (useState, useEffect)
-Styling: CSS
-Storage: Local storage for persistence
+### Cross-App Integration
+- 🔁 Compose mail directly from note content
+- 🔗 Rich link between Keep & Gmail experiences
 
+---
 
+## 🛠️ Components Breakdown
 
-🏗️ Project Structure
-Copy/Appsus
-├── /cmps                  # Shared components
-├── /lib                   # External libraries
-├── /pages                 # Main application pages
-├── /services              # Utility and service functions
-├── /apps
-│   ├── /mail              # Mail application
-│   │   ├── /cmps
-│   │   │   ├── GmailLoader.jsx
-│   │   │   ├── MailCompose.jsx
-│   │   │   ├── MailFilter.jsx
-│   │   │   ├── MailFolderList.jsx
-│   │   │   ├── MailList.jsx
-│   │   │   └── MailPreview.jsx
-│   │   ├── /pages
-│   │   │   ├── MailDetails.jsx
-│   │   │   └── MailIndex.jsx
-│   │   └── /services
-│   │       └── mail.service.js
-│   └── /note              # Notes application
-│       ├── /cmps
-│       │   ├── /dynamic-components # Note type components
-│       │   │   ├── NoteAudio.jsx
-│       │   │   ├── NoteCanvas.jsx
-│       │   │   ├── NoteImg.jsx
-│       │   │   ├── NoteTodos.jsx
-│       │   │   ├── NoteTxt.jsx
-│       │   │   └── NoteVideo.jsx
-│       │   ├── /sidebar-components
-│       │   ├── NoteAdd.jsx
-│       │   ├── NoteList.jsx
-│       │   └── NotePreview.jsx
-│       ├── /pages
-│       │   ├── NoteEdit.jsx
-│       │   └── NoteIndex.jsx
-│       └── /services
-│           └── note.service.js
-└── /assets
-    └── /css               # Component-specific styling
-    App screenshots
-![HOME](https://github.com/user-attachments/assets/b97c9f7e-7e90-449c-bf59-8265d9ab6bb0)
-![ABOUT](https://github.com/user-attachments/assets/a8ad3775-4bb6-4159-9074-acb1d2f194e0)
-![NOTES](https://github.com/user-attachments/assets/7f3e72ba-c2bc-4874-922a-ea65afc14f5a)
-![GMAIL](https://github.com/user-attachments/assets/b35711fb-43de-4394-8dd9-4c301390fc3f)
+### 📧 Mail
+- `MailIndex` – Main interface
+- `MailCompose` – Editor with auto-save
+- `MailList` & `MailPreview` – Email list view
+- `MailDetails` – Full email view
+- `MailFilter` – Search & filter logic
+- `MailFolderList` – Navigation sidebar
 
-🔧 Key Functionality
-Notes Management
+### 📝 Notes
+- `NoteIndex` – Main layout and state
+- `NoteAdd` – Create new notes
+- `NoteList` & `NotePreview` – Grid view
+- `NoteEdit` – Modal editing UI
+- `Dynamic Components` – Different note types:
+  - `NoteTxt`, `NoteImg`, `NoteTodos`, `NoteVideo`, `NoteCanvas`, `NoteAudio`
 
-Create: Add new notes with various formats
-Read: View all your notes in an organized grid layout
-Update: Edit notes in a modal interface
-Delete: Move notes to trash and permanently delete them
-Organize: Archive notes to declutter your main view
+---
 
-Email System
+## 🧪 Future Enhancements
 
-Composition: Create new emails with a rich editor
-Folders: Organize emails into inbox, sent, drafts, starred, and trash
-Actions: Star, read/unread, delete, and restore emails
-Auto-save: Automatic saving of drafts every 5 seconds
-Integration: Send notes as emails directly from the notes app
+- 🔐 User authentication
+- ☁️ Cloud storage integration
+- 🧑‍🤝‍🧑 Collaborative notes
+- 🏷️ Labels & categories
+- 📱 Mobile support / PWA
 
-Special Features
+---
 
-Canvas Drawing: Create sketches directly in notes
-Todo Management: Create checklists with items that can be marked as done
-YouTube Integration: Add and play YouTube videos in notes
-Audio Support: Add audio links to your notes
-Cross-app Integration: Send notes as emails with a single click
+## 🤝 Contributing
 
-🧩 Components
-Mail Components
+Contributions, issues, and feature requests are welcome!  
+Feel free to open an [issue](https://github.com/ShohamShtiler/Appsus/issues) or submit a PR.
 
-MailIndex: Main email management interface
-MailCompose: Email composition interface with auto-saving
-MailList: Displays emails in a list format
-MailPreview: Preview of individual emails in the list
-MailDetails: Full view of selected email
-MailFilter: Search and filter emails
-MailFolderList: Navigation between email folders
+---
 
-Notes Components
+## 👏 Acknowledgements
 
-NoteApp: Main notes application container
-NoteIndex: Manages the notes display and organization
-NoteAdd: Component for creating new notes
-NoteList: Displays the grid of note cards
-NotePreview: Card view of individual notes
-NoteEdit: Modal for editing notes
-Dynamic Components: Specialized components for each note type
+- Inspired by **Google Keep** and **Gmail**
+- Icons from **Material Design** & **Font Awesome**
 
-📋 Future Enhancements
+---
 
-User authentication
-Cloud storage integration
-Collaborative notes and emails
-Labels and categories
-Mobile app version
-
-🤝 Contributing
-Contributions, issues, and feature requests are welcome! Feel free to check issues page.
-
-👏 Acknowledgements
-
-Inspired by Google's productivity suite
-Icons from Material Design and Font Awesome
-
-
-Made with ❤️ by Shoham and Shmuel
+**Made with ❤️ by Shoham & Shmuel**
