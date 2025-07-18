@@ -2,7 +2,9 @@
 
 A comprehensive clone of **Google’s productivity suite**, built with **React**, featuring core functionality from **Google Keep** and **Gmail**. This project showcases advanced front-end development, state management, modular design, and cross-app integration.
 
-> ✨ Pixel-perfect · Component-driven · Fully responsive
+[![Live Demo](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge&logo=github)](https://shohamshtiler.github.io/Appsus/)
+
+> ✨ Pixel-perfect · Component-driven · Responsive design in progress
 
 ---
 
